@@ -1,3 +1,5 @@
+require 'colorize'
+
 class Board
   def self.empty_grid
     Array.new(9) do
@@ -81,7 +83,6 @@ class Board
   private
   attr_reader :grid
 end
-
 class Tile
   attr_reader :value
 
@@ -109,6 +110,7 @@ class Tile
       @value = new_value
     end
   end
+end
 
 class SudokuGame
   def self.from_file(filename)
